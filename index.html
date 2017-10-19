@@ -12,21 +12,22 @@
 
   <div id="form">
     <form action="#" method="#">
-      <label for="latitude">Latitude:</label>
-      <input name="latitude" type="number" min="-90" max="90" step="0.01" placeholder="-90 to 90" autofocus required>
+      <label for="lat">Latitude:</label>
+      <input name="lat" type="number" min="-90" max="90" step="0.01" id="lat" placeholder="-90 to 90" autofocus required>
 
-      <label for="longitude">Longitude:</label>
-      <input name="longitude" type="number" min="-180" max="180" step="0.01" placeholder="-180 to 180" required>
+      <label for="lng">Longitude:</label>
+      <input name="lng" type="number" min="-180" max="180" step="0.01" id="lng" placeholder="-180 to 180" required>
 
       <label for="message">Message:</label>
-      <input name="message" type="text" placeholder="Optional">
+      <input name="message" type="text" id="message" placeholder="Optional">
 
-      <input type="submit" value="Place Marker">
+      <button type='button' id="submit">Place Marker</button>
     </form>
   </div>
-  
+
   <div id="map"></div>
 
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
   <script src="js/google-maps.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl-5FX1K6sgNdDhRsfbQDNV6TCTGXCd2U&callback=initMap"
     async defer></script>
